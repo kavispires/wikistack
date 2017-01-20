@@ -18,6 +18,10 @@ var Page = db.define('page', {
     },
     status: {
         type: Sequelize.ENUM('open', 'closed')
+    },
+    date: {
+    	type: Sequelize.DATE,
+    	defaultValue: Sequelize.NOW
     }
 });
 
@@ -28,6 +32,7 @@ var User = db.define('user', {
     },
     email: {
         type: Sequelize.STRING,
+        isEmail: true,
         allowNull: false
     }
 });
