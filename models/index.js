@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 var db = new Sequelize('postgres://localhost:5432/wikistack', {
-	logging: false
+    logging: false
 });
 
 var Page = db.define('page', {
@@ -20,8 +20,8 @@ var Page = db.define('page', {
         type: Sequelize.ENUM('open', 'closed')
     },
     date: {
-    	type: Sequelize.DATE,
-    	defaultValue: Sequelize.NOW
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.NOW
     }
 });
 
